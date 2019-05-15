@@ -9,10 +9,11 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Perpustakaan</title>
+  <title><?= $title; ?></title>
 
   <!-- This link for css assets-->
-  <link href="https://salung.000webhostapp.com/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://localhost/perpustakaan-online/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://localhost/perpustakaan-online/assets/css/auth-main.css" rel="stylesheet">
 
 </head>
 

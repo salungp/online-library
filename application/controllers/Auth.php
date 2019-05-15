@@ -14,19 +14,23 @@ class Auth extends CI_Controller
 
 	public function login()
 	{
-		$this->load->view('auth/auth_header');
+		$data['title'] = 'Perpustakaan - Halaman Login';
+
+		$this->load->view('auth/auth_header', $data);
 		$this->load->view('auth/login');
 		$this->load->view('auth/auth_footer');
 	}
 
 	public function auth_login()
-	{
+	{	
+		$data['title'] = 'Perpustakaan - Halaman Login';
+
 		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
 		$this->form_validation->set_rules('password', 'Password', 'required|trim');
 
 		if ($this->form_validation->run() == false)
 		{
-			$this->load->view('auth/auth_header');
+			$this->load->view('auth/auth_header', $data);
 			$this->load->view('auth/login');
 			$this->load->view('auth/auth_footer');
 		} else {
@@ -44,15 +48,15 @@ class Auth extends CI_Controller
 						'logged_in' => TRUE
 					]);
 
-					header('location:https://salung.000webhostapp.com/');
+					header('location:http://localhost/perpustakaan-online/');
 
 				} else {
 					$this->session->set_flashdata('message', "<div class='alert alert-danger'>Maaf password yang anda inputkan salah!</div>");
-					header('location:https://salung.000webhostapp.com/login');
+					header('location:http://localhost/perpustakaan-online/login');
 				}
 			} else {
 				$this->session->set_flashdata('message', "<div class='alert alert-danger'>Maaf email tidak terdaftar!</div>");
-					header('location:https://salung.000webhostapp.com/login');
+					header('location:http://localhost/perpustakaan-online/login');
 			}
 		}
 	}
@@ -60,7 +64,7 @@ class Auth extends CI_Controller
 	public function logout()
 	{
 		$this->session->unset_userdata('logged_in');
-		header('location:https://salung.000webhostapp.com/login');;
+		header('location:http://localhost/perpustakaan-online/login');
 	}
 
 	public function profile()
@@ -82,13 +86,17 @@ class Auth extends CI_Controller
 
 	public function register()
 	{
-		$this->load->view('auth/auth_header');
+		$data['title'] = 'Perpustakaan - Halaman Registrasi';
+
+		$this->load->view('auth/auth_header', $data);
 		$this->load->view('auth/register');
 		$this->load->view('auth/auth_footer');
 	}
 
 	public function auth_register()
 	{
+		$data['title'] = 'Perpustakaan - Halaman Registrasi';
+
 		$this->form_validation->set_rules('name', 'Name', 'required|trim');
 		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
 		$this->form_validation->set_rules('password', 'Password', 'required|trim');
@@ -101,7 +109,7 @@ class Auth extends CI_Controller
 
 		if ($this->form_validation->run() == false)
 		{
-			$this->load->view('auth/auth_header');
+			$this->load->view('auth/auth_header', $data);
 			$this->load->view('auth/register');
 			$this->load->view('auth/auth_footer');
 		} else {
@@ -117,7 +125,7 @@ class Auth extends CI_Controller
 			]);
 
 			$this->session->set_flashdata('message', "<div class='alert alert-success'>Daftar berhasil silahkan login terlebih dahulu!</div>");
-			header('location:https://salung.000webhostapp.com/login');;
+			header('location:http://localhost/perpustakaan-online/login');
 		}
 	}
 
@@ -125,7 +133,7 @@ class Auth extends CI_Controller
 	{
 		$config['upload_path']          = './assets/images/foto_profile/';
         $config['allowed_types']        = 'gif|jpg|png';
-        $config['max_size']             = 9000;
+        $config['max_size']             = 90000;
         $config['max_width']            = 1024;
         $config['max_height']           = 768;
 
@@ -135,7 +143,7 @@ class Auth extends CI_Controller
         {
             $this->session->set_flashdata('message', "<div class='alert alert-danger'>Foto gagal diganti!,pastikan foto berekstensi png/jpg/gif.Atau foto sizenya terlalu besar!</div>");
 
-            redirect('profile');
+            header('location:http://localhost/perpustakaan-online/profile');
         } else {
         	$user = $this->db->get_where('users', ['name' => $_SESSION['name']])->row_array();
         	$dir_file = './assets/images/foto_profile/' . $user['profile_image'];
@@ -149,7 +157,7 @@ class Auth extends CI_Controller
 
 	        	$this->session->set_flashdata('message', "<div class='alert alert-success'>Foto berhasil di ganti!</div>");
 
-            	redirect('profile');
+            	header('location:http://localhost/perpustakaan-online/profile');
         	}
         	elseif ($user['profile_image'] != 'default.jpg' && unlink($dir_file))
         	{    	
@@ -160,7 +168,7 @@ class Auth extends CI_Controller
 
 	        	$this->session->set_flashdata('message', "<div class='alert alert-success'>Foto berhasil di ganti!</div>");
 
-            	redirect('profile');
+            	header('location:http://localhost/perpustakaan-online/profile');
         	}
         }
 	}
@@ -209,7 +217,7 @@ class Auth extends CI_Controller
 
 			$this->session->set_flashdata('message', "<div class='alert alert-success'>Data berhasil diubah!</div>");
 
-            redirect('profile');
+            header('location:http://localhost/perpustakaan-online/profile');
 		}
 	}
 
@@ -258,7 +266,7 @@ class Auth extends CI_Controller
 
 			$this->session->set_flashdata('message', "<div class='alert alert-success'>Donasi buku " . $judul . " berhasil</div>");
 
-            redirect('profile');
+            header('location:http://localhost/perpustakaan-online/profile');
 		}
 	}
 }

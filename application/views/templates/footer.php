@@ -9,9 +9,9 @@
 	</div>
   </div>
   <!-- Bootstrap core JavaScript-->
-  <script src="https://salung.000webhostapp.com/assets/js/jquery.js"></script>
-  <script src="https://salung.000webhostapp.com/assets/js/bootstrap.min.js"></script>
-  <script src="https://salung.000webhostapp.com/assets/js/main.js"></script>
+  <script src="http://localhost/perpustakaan-online/assets/js/jquery.js"></script>
+  <script src="http://localhost/perpustakaan-online/assets/js/bootstrap.min.js"></script>
+  <script src="http://localhost/perpustakaan-online/assets/js/main.js"></script>
 
 </body>
 

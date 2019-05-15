@@ -1,33 +1,35 @@
-<div class="container ml-auto">
-	
-	<form action="https://salung.000webhostapp.com/auth/auth_register" method="POST" style="width: 450px;max-width: 450px;padding: 20px;box-sizing: border-box;">
-
-		<h3>Register</h3>
+<div class="content-wrapper">
+	<div class="container">
 		
-		<div class="content">
-			<label for="name">Name</label>
-			<input type="text" name="name" id="name" class="form-control" value="<?= set_value('name'); ?>">
-			<small style="color: red;"><?= form_error('name'); ?></small><br>
-		</div>
+		<form action="http://localhost/perpustakaan-online/auth/auth_register" method="POST">
 
-		<div class="content">
-			<label for="enail">Email</label>
-			<input type="text" name="email" id="enail" class="form-control" value="<?= set_value('email'); ?>">
-			<small style="color: red;"><?= form_error('email'); ?></small><br>
-		</div>
+			<h3>Register</h3>
+			
+			<div class="content">
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" value="<?= set_value('name'); ?>" class="input">
+				<small style="color: red;"><?= form_error('name'); ?></small>
+			</div>
 
-		<div class="content">
-			<label for="password">Password</label>
-			<input type="password" name="password" id="password" class="form-control">
-			<small style="color: red;"><?= form_error('password'); ?></small><br>
-		</div>
+			<div class="content">
+				<label for="enail">Email</label>
+				<input type="text" name="email" id="enail" value="<?= set_value('email'); ?>" class="input">
+				<small style="color: red;"><?= form_error('email'); ?></small>
+			</div>
 
-		<br>
+			<div class="content">
+				<label for="password">Password</label>
+				<input type="password" name="password" id="password" class="input">
+				<small style="color: red;"><?= form_error('password'); ?></small>
+				<input type="checkbox" id="showPassword">
+				<label style="margin-left: 7px;" id="text-info">Show Password</label>
+			</div>
 
-		<button type="submit" class="btn btn-primary">Sign Up</button>
+			<button type="submit">Sign Up</button>
 
-		<p>Sudah punya akun?, <a href="https://salung.000webhostapp.com/login">Login</a></p>
+			<p>Sudah punya akun?, <a href="http://localhost/perpustakaan-online/login">Login</a></p>
 
-	</form>
+		</form>
 
+	</div>
 </div>

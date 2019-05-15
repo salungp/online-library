@@ -265,3 +265,54 @@ nav.navbar button img {
 	padding: 0;
 	font-size: var(--text);
 }
+
+@media (min-width: 786px)
+{
+	.group-search {
+		display: none;
+	}
+
+}
+
+@media (max-width: 786px)
+{
+	nav.navbar .container {
+		padding: 0 15px;
+	}
+
+	nav.navbar .my-account {
+		position: relative;
+		left: -15px;
+	}
+
+	nav.navbar .navbar-toggler {
+		border: none;
+		outline: none;
+	}
+
+	.sactive {
+		transform: scaleX(1);
+	}
+
+	input.input-search {
+		background: none;
+		transform-origin: right;
+		border: none;
+		border-bottom: 2px solid #333333;
+		padding: 5px 8px;
+		outline: none;
+		transform: scaleX(0);
+		transition: .2s;
+	}
+
+	.btn-search,
+	.btn-show
+	 {
+		background: none;
+		outline: none;
+	}
+
+	.form-inline {
+		display: none;
+	}
+}

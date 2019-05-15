@@ -1,12 +1,12 @@
 
-	<div class="row" id="data">
+	<div class="row">
 		<?php if (count($buku) <= 0) : ?>
 
 			<h1 class="text-heading">Tidak ada hasil yang ditampilkan!</h1>
 
 		<?php else : ?>
 			<?php foreach ($buku as $data) : ?>
-				<div class="col-md-3 col-sm-4 col-xs-3 col-lg-3" style="box-sizing: border-box;">
+				<div class="col-xs-2 col-sm-4" style="box-sizing: border-box;">
 					<div class="card mb-4">
 					  <div class="card-body">
 

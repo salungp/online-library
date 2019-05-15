@@ -1,0 +1,56 @@
+/*body*/
+body {
+	background: #fafafa;
+}
+
+/*content wrapper*/
+.content-wrapper {
+	padding: 20px 10px;
+	box-sizing: border-box;
+	background: #ffffff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 340px;
+	box-shadow: 0 0 5px solid rgba(0,0,0,.2);
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 2px;
+}
+
+.content-wrapper form h3 {
+	text-align: center;
+	font-size: 24px;
+}
+
+.content-wrapper form .input {
+	width: 100%;
+	border: none;
+	background: #f2f2f2;
+	outline: none;
+	border: 2px solid #f2f2f2;
+	padding: 5px 8px;
+	margin: 5px 0;
+}
+
+.content-wrapper form button {
+	border: none;
+	outline: none;
+	background: #00b300;
+	color: #ffffff;
+	width: 100%;
+	padding: 5px 8px;
+	margin: 5px 0;
+	cursor: pointer;
+}
+
+.content-wrapper form button:hover {
+	background: #009900;
+}
+
+.content-wrapper form .input:hover {
+	border: 2px solid #eaeaea;
+}
+.content-wrapper form .input:focus {
+	border: 2px solid #333333;
+}
