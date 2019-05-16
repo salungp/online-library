@@ -11,13 +11,6 @@ $(document).ready(function(){
 
 	});
 
-
-	// $('#keyword').on('keyup', function(){
-	// 	$.get('cari/?cari=' + $('#keyword').val(), function(data){
-	// 		$('#result-search').html(data);
-	// 	});
-	// });
-
 	$('.btn-show').hide();
 
 	$('.btn-search').click(function(){
