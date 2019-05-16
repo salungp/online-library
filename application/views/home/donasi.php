@@ -2,7 +2,7 @@
 	<h1 class="text-subheading">Donasi Buku</h1>
 	<hr>
 	<div class="col-md-6 col-lg-6 col-sm-7 col-xs-12">
-		<form action="https://salung.000webhostapp.com/donasi" method="post">
+		<form action="<?= base_url('donasi'); ?>" method="post">
 
 			<label for="judul" class="text">Judul Buku :</label><br>
 			<input type="text" name="judul" class="form-control mb-2" id="judul" value="<?= set_value('judul'); ?>">

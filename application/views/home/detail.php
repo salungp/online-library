@@ -1,7 +1,7 @@
 <div class="container">
 
 	<div class="link">
-		<a href="https://salung.000webhostapp.com/home">Home  </a>&raquo;  <a href="https://salung.000webhostapp.com/detail/<?= $buku['id']; ?>">Detail  </a>&raquo;  <a><?= $buku['judul']; ?></a>
+		<a href="<?= base_url(); ?>">Home  </a>&raquo;  <a href="<?= base_url('detail/' . $buku['id']); ?>">Detail  </a>&raquo;  <a><?= $buku['judul']; ?></a>
 	</div>
 
 	<?= $this->session->flashdata('message'); ?>
@@ -30,8 +30,6 @@
 
 				<?php if ($buku['status'] == 1) : ?>
 
-					<a class="btn-salung">Pinjam</a>
-
 				<?php else : ?>
 
 					<button type="button" class="btn-salung" data-toggle="modal" data-target="#exampleModal">
@@ -39,7 +37,7 @@
 		</button>
 				<?php endif; ?>
 
-				<a href="https://salung.000webhostapp.com/" class="btn-pucat">Kembali</a>
+				<a href="<?= base_url(); ?>" class="btn-pucat">Kembali</a>
 			</div>
 		</div>
 
@@ -55,7 +53,7 @@
 						<div class="sidebar-item">
 							<b class="text"><?= $item['judul']; ?></b>
 							<p class="text"><?= substr($item['deskripsi'], 0, 50); ?>...</p>
-							<a href="https://salung.000webhostapp.com/detail/<?= $item['id']; ?>" class="text blue"><i>Detail &raquo;</i></a>
+							<a href="<?= base_url('detail/' . $item['id']); ?>" class="text blue"><i>Detail &raquo;</i></a>
 						</div>
 					<hr>
 
@@ -79,7 +77,7 @@
       </div>
       <div class="modal-body">
       	<p>Max 10 hari</p>
-      	<form action="https://salung.000webhostapp.com/home/pinjam" method="post">	
+      	<form action="<?= base_url('home/pinjam'); ?> method="post">	
 			<input type="hidden" name="buku" value="<?= $buku['judul']; ?>">
 			<input type="hidden" name="user" value="<?= $_SESSION['name']; ?>">
 			<input type="hidden" name="id" value="<?= $buku['id']; ?>">

@@ -6,7 +6,7 @@
 
 		<?php else : ?>
 			<?php foreach ($buku as $data) : ?>
-				<div class="col-xs-2 col-sm-4" style="box-sizing: border-box;">
+				<div class="col-xs-2 col-sm-3 col-md-3 col-lg-3" style="box-sizing: border-box;">
 					<div class="card mb-4">
 					  <div class="card-body">
 
@@ -31,7 +31,7 @@
 						<?php endif; ?>
 
 					    <p class="text" style="margin-bottom: 10px;"><?= substr($data['deskripsi'], 0, 40); ?>...</p>
-					    <a href="https://salung.000webhostapp.com/detail/<?= $data['id']; ?>" class="btn-salung">Detail</a>
+					    <a href="<?= base_url('detail/' . $data['id']); ?>" class="btn-salung">Detail</a>
 					  </div>
 					</div>
 				</div>
