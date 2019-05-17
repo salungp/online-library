@@ -60,8 +60,8 @@
         </li>    
       </ul>
       <form class="form-inline my-2 my-lg-0" action="<?= base_url('cari'); ?>" method="get">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="cari" id="keyword">
-        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search here..." aria-label="Search" name="cari" id="keyword">
+        <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
       </form>  
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle my-account" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

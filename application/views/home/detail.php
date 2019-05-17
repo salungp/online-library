@@ -21,6 +21,8 @@
 
 				<?php endif; ?>
 
+				<a style="font-size: 11px;font-weight: bold;"><i class="far fa-user"></i> Oleh <?= $buku['pengarang']; ?></a>
+
 				<h2 class="text-subheading">Karya : <i><?= $buku['pengarang']; ?></i></h2>
 				<b class="text">Penerbit :</b>
 				<p class="text"><?= $buku['penerbit']; ?></p>

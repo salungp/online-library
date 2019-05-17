@@ -30,8 +30,16 @@
 
 						<?php endif; ?>
 
+						<br>
+
+						<a style="font-size: 11px;"><i class="far fa-clock" style="margin-right: 4px;font-size: 11px;"></i> 24 mnt ago</a>
+
 					    <p class="text" style="margin-bottom: 10px;"><?= substr($data['deskripsi'], 0, 40); ?>...</p>
 					    <a href="<?= base_url('detail/' . $data['id']); ?>" class="btn-salung">Detail</a>
+					  </div>
+					  <div class="card-footer">
+					  	<button class="clean" style="margin-right: 20px;"><i class="fas fa-thumbs-up"></i> Suka</button>
+					  	<button class="clean"><i class="fas fa-comment-alt"></i> Komentar</button>
 					  </div>
 					</div>
 				</div>
