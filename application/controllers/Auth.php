@@ -48,15 +48,15 @@ class Auth extends CI_Controller
 						'logged_in' => TRUE
 					]);
 
-					header('location:http://localhost/perpustakaan-online/');
+					header('location:' . base_url());
 
 				} else {
 					$this->session->set_flashdata('message', "<div class='alert alert-danger'>Maaf password yang anda inputkan salah!</div>");
-					header('location:http://localhost/perpustakaan-online/login');
+					header('location:' . base_url('login'));
 				}
 			} else {
 				$this->session->set_flashdata('message', "<div class='alert alert-danger'>Maaf email tidak terdaftar!</div>");
-					header('location:http://localhost/perpustakaan-online/login');
+					header('location:' . base_url('login'));
 			}
 		}
 	}
@@ -64,7 +64,7 @@ class Auth extends CI_Controller
 	public function logout()
 	{
 		$this->session->unset_userdata('logged_in');
-		header('location:http://localhost/perpustakaan-online/login');
+		header('location:' . base_url('login'));
 	}
 
 	public function profile()
@@ -125,7 +125,7 @@ class Auth extends CI_Controller
 			]);
 
 			$this->session->set_flashdata('message', "<div class='alert alert-success'>Daftar berhasil silahkan login terlebih dahulu!</div>");
-			header('location:http://localhost/perpustakaan-online/login');
+			header('location:' . base_url('login'));
 		}
 	}
 
@@ -168,7 +168,7 @@ class Auth extends CI_Controller
 
 	        	$this->session->set_flashdata('message', "<div class='alert alert-success'>Foto berhasil di ganti!</div>");
 
-            	header('location:http://localhost/perpustakaan-online/profile');
+            	header('location:' . base_url('profile'));
         	}
         }
 	}
@@ -217,7 +217,7 @@ class Auth extends CI_Controller
 
 			$this->session->set_flashdata('message', "<div class='alert alert-success'>Data berhasil diubah!</div>");
 
-            header('location:http://localhost/perpustakaan-online/profile');
+            header('location:' . base_url('profile'));
 		}
 	}
 
@@ -266,7 +266,7 @@ class Auth extends CI_Controller
 
 			$this->session->set_flashdata('message', "<div class='alert alert-success'>Donasi buku " . $judul . " berhasil</div>");
 
-            header('location:http://localhost/perpustakaan-online/profile');
+            header('location:' . base_url('profile'));
 		}
 	}
 }

@@ -11,7 +11,7 @@
 			<div class="sidebar mb-4">
 				<div class="force-center">
 					<div class="img-content">
-						<img class="profile-image" src="<?= base_url('assets/images/foto_profile' . $user_data['profile_image']); ?>" width="200">
+						<img class="profile-image" src="<?= base_url('assets/images/foto_profile/' . $user_data['profile_image']); ?>" width="200">
 						<label for="foto" class="label-img btn-salung">Ubah</label>
 
 						<form action="<?= base_url('profile/foto'); ?>" method="post" enctype="multipart/form-data">

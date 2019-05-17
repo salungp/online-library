@@ -77,7 +77,7 @@
       </div>
       <div class="modal-body">
       	<p>Max 10 hari</p>
-      	<form action="<?= base_url('home/pinjam'); ?> method="post">	
+      	<form action="<?= base_url('home/pinjam'); ?> method="post" class="form-pinjam">	
 			<input type="hidden" name="buku" value="<?= $buku['judul']; ?>">
 			<input type="hidden" name="user" value="<?= $_SESSION['name']; ?>">
 			<input type="hidden" name="id" value="<?= $buku['id']; ?>">
@@ -89,7 +89,7 @@
       </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	        <button type="submit" class="btn btn-primary">Pinjam</button>
+	        <button type="submit" class="btn btn-primary btn-pinjam">Pinjam</button>
 	      </div>
 	    </form>
     </div>
